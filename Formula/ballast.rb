@@ -6,15 +6,15 @@
 class Ballast < Formula
   desc "Local-first durability-scoring CLI that wraps the settle engine"
   homepage "https://github.com/artisan-build/ballast-cli"
-  version "0.7.0"
+  version "0.8.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://ballast.now/cli/0.7.0/ballast-macos-arm64"
-      sha256 "b9a79953f18e1413a34c0809179ae1870ce92c992f143c0ede4744d6bb915a40"
+      url "https://ballast.now/cli/0.8.0/ballast-macos-arm64"
+      sha256 "844629c3404a01066d37274b12d04b843988e46f575f3ed1a5c9cc9fdcd75a28"
     else
-      url "https://ballast.now/cli/0.7.0/ballast-macos-x86_64"
-      sha256 "f2ea83b8af039a9766aef2b2309bdd93dbf441083de4c6be07d2d8fe29bba6ba"
+      url "https://ballast.now/cli/0.8.0/ballast-macos-x86_64"
+      sha256 "8c8fba55079cd327f0f185c2913ea4f3e8834a757ea2878e602d7a983d2c86c9"
     end
   end
 
