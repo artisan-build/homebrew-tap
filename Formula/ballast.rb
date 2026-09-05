@@ -6,13 +6,24 @@
 class Ballast < Formula
   desc "Local-first durability-scoring CLI that wraps the settle engine"
   homepage "https://github.com/artisan-build/ballast-cli"
+  url "https://ballast.now/cli/0.15.0/ballast-macos-arm64"
   version "0.15.0"
+  sha256 "d51f901023b7e3d2f0497144cd81f770c76675dbc4fe9cc57b5d39e04d0c66fc"
+
+  # Homebrew evaluates every file in a tap for every platform, including Linux,
+  # and a formula that defines no url on some platform is invalid there. An
+  # invalid formula does not merely fail for itself — it makes the whole tap
+  # untappable, taking every other formula and cask down with it. So the
+  # Apple Silicon build is the top-level default, present on all platforms,
+  # and depends_on :macos is what actually refuses a non-macOS install.
+  #
+  # Intel is an override rather than a branch: `on_arm`/`on_intel` at the top
+  # level may not carry a url, and a bare `if Hardware::CPU.arm?` inside
+  # `on_macos` leaves Linux with nothing.
+  depends_on :macos
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://ballast.now/cli/0.15.0/ballast-macos-arm64"
-      sha256 "d51f901023b7e3d2f0497144cd81f770c76675dbc4fe9cc57b5d39e04d0c66fc"
-    else
+    on_intel do
       url "https://ballast.now/cli/0.15.0/ballast-macos-x86_64"
       sha256 "c226bcedd3f3d41351945e9fef4981a2d3981766bc08f57e2717caf2301a07ca"
     end
