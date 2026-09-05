@@ -14,7 +14,7 @@ cask "sonocles" do
   # brew installs cheerfully on an Intel Mac and the failure arrives as a
   # crash instead of a refusal.
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Sonocles.app"
 
