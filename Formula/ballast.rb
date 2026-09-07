@@ -6,9 +6,9 @@
 class Ballast < Formula
   desc "Local-first durability-scoring CLI that wraps the settle engine"
   homepage "https://github.com/artisan-build/ballast-cli"
-  url "https://ballast.now/cli/0.15.0/ballast-macos-arm64"
-  version "0.15.0"
-  sha256 "d51f901023b7e3d2f0497144cd81f770c76675dbc4fe9cc57b5d39e04d0c66fc"
+  url "https://ballast.now/cli/0.15.1/ballast-macos-arm64"
+  version "0.15.1"
+  sha256 "d6fad808b280d1efc08db06de839e891940da57c825d498d2ee0aa922564d072"
 
   # Homebrew evaluates every file in a tap for every platform, including Linux,
   # and a formula that defines no url on some platform is invalid there. An
@@ -24,8 +24,8 @@ class Ballast < Formula
 
   on_macos do
     on_intel do
-      url "https://ballast.now/cli/0.15.0/ballast-macos-x86_64"
-      sha256 "c226bcedd3f3d41351945e9fef4981a2d3981766bc08f57e2717caf2301a07ca"
+      url "https://ballast.now/cli/0.15.1/ballast-macos-x86_64"
+      sha256 "1aaeb72ae49448e61bbe3a44e89516e5e4d31f04fd5e5d788c051f16b2cf7865"
     end
   end
 
