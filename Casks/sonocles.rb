@@ -1,6 +1,6 @@
 cask "sonocles" do
-  version "0.1.2"
-  sha256 "f86cc0493bf6bc6502a74be7203f3211df96fcd262e20fb449ef9a1fe9d87a4a"
+  version "0.1.3"
+  sha256 "233c88d371f5ee7c57045f18b681e1a9700bf3ae705624e43d2dd37bbc8fe2fb"
 
   # The asset name carries no version on purpose, so that
   # /releases/latest/download/Sonocles.dmg keeps resolving for the website.
