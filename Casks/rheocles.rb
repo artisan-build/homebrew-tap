@@ -2,8 +2,8 @@ cask "rheocles" do
   # 0.0.0 and an all-zero digest on purpose: nothing has shipped. This file is
   # the target bump-cask.sh rewrites on the first v* release; until then the
   # URL 404s and the checksum can never match, so `brew install` refuses.
-  version "0.1.0"
-  sha256 "ffae4ae8c4716f5994be34cd56bd867b91127ce445b863c12bc3a5d77ebd48d1"
+  version "0.1.1"
+  sha256 "3e1efb7b4bde06da72777d2791a39144e83c403ee9f44e20b2f9ad10d93a89ee"
 
   # The asset name carries no version on purpose, so that
   # /releases/latest/download/Rheocles.dmg keeps resolving for the website.
